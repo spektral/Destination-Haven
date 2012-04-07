@@ -3,6 +3,8 @@ package controllers;
 import java.io.IOException;
 import java.util.Scanner;
 
+import javax.media.opengl.GLAutoDrawable;
+
 public class IntroController implements IController {
 	private String buffer;
 
@@ -21,4 +23,8 @@ public class IntroController implements IController {
 		}
 	}
 
+	@Override
+	public void draw(GLAutoDrawable drawable) {
+
+	}
 }
