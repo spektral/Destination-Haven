@@ -1,4 +1,4 @@
-import controllers.ControllerStack;
+import controllers.ControllerController;
 import controllers.IntroController;
 
 public class DestinationHaven {
@@ -7,7 +7,7 @@ public class DestinationHaven {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ControllerStack.push(new IntroController());
-		ControllerStack.start();
+		ControllerController.push(new IntroController());
+		ControllerController.start();
 	}
 }

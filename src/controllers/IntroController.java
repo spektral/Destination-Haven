@@ -1,17 +1,24 @@
 package controllers;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class IntroController implements IController {
+	private String buffer;
 
 	@Override
 	public void handleEvents() {
-		// TODO Auto-generated method stub
-
+		Scanner in = new Scanner(System.in);
+		buffer = in.nextLine();
 	}
 
 	@Override
 	public void update() {
-		// TODO Auto-generated method stub
-
+		try {
+			System.out.write(buffer.getBytes());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
