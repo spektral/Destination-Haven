@@ -1,18 +1,13 @@
 package controllers;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
-import java.util.Scanner;
 
 import javax.media.opengl.GLAutoDrawable;
 
 public class IntroController implements IController {
 	private String buffer;
-
-	@Override
-	public void handleEvents() {
-		Scanner in = new Scanner(System.in);
-		buffer = in.nextLine();
-	}
 
 	@Override
 	public void update() {
@@ -25,6 +20,20 @@ public class IntroController implements IController {
 
 	@Override
 	public void draw(GLAutoDrawable drawable) {
+
+	}
+
+	@Override
+	public void handleMouseEvent(MouseEvent event) {
+		switch (event.getID()) {
+		case MouseEvent.MOUSE_ENTERED:
+			break;
+		}
+	}
+
+	@Override
+	public void handleKeyEvent(KeyEvent event) {
+		// TODO Auto-generated method stub
 
 	}
 }
