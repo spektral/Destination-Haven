@@ -1,5 +1,5 @@
-import Controllers.ControllerStack;
-import Controllers.IntroController;
+import controllers.ControllerStack;
+import controllers.IntroController;
 
 public class DestinationHaven {
 
