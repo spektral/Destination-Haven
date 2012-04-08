@@ -1,5 +1,13 @@
 package models;
 
+import java.awt.Point;
+
 public interface IModel {
-	// TODO: Write stuff
+	public void setPoint(int x, int y);
+
+	public void setSprite();
+
+	public Point getPoint();
+
+	public Sprite getSprite();
 }
