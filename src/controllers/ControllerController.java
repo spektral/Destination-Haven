@@ -6,6 +6,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.Stack;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLEventListener;
@@ -30,6 +32,7 @@ public class ControllerController implements GLEventListener, KeyListener,
 
 	@Override
 	public void init(GLAutoDrawable drawable) {
+		Logger.getLogger("ControllerController").log(Level.INFO, "GLInit");
 	}
 
 	@Override
@@ -40,61 +43,51 @@ public class ControllerController implements GLEventListener, KeyListener,
 
 	@Override
 	public void mouseDragged(MouseEvent event) {
-		// TODO Auto-generated method stub
-
+		subControllers.peek().handleMouseEvent(event);
 	}
 
 	@Override
 	public void mouseMoved(MouseEvent event) {
-		// TODO Auto-generated method stub
-
+		subControllers.peek().handleMouseEvent(event);
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent event) {
-		// TODO Auto-generated method stub
-
+		subControllers.peek().handleMouseEvent(event);
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent event) {
-		// TODO Auto-generated method stub
-
+		subControllers.peek().handleMouseEvent(event);
 	}
 
 	@Override
 	public void mouseExited(MouseEvent event) {
-		// TODO Auto-generated method stub
-
+		subControllers.peek().handleMouseEvent(event);
 	}
 
 	@Override
 	public void mousePressed(MouseEvent event) {
-		// TODO Auto-generated method stub
-
+		subControllers.peek().handleMouseEvent(event);
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent event) {
-		// TODO Auto-generated method stub
-
+		subControllers.peek().handleMouseEvent(event);
 	}
 
 	@Override
 	public void keyPressed(KeyEvent event) {
-		// TODO Auto-generated method stub
-
+		subControllers.peek().handleKeyEvent(event);
 	}
 
 	@Override
 	public void keyReleased(KeyEvent event) {
-		// TODO Auto-generated method stub
-
+		subControllers.peek().handleKeyEvent(event);
 	}
 
 	@Override
 	public void keyTyped(KeyEvent event) {
-		// TODO Auto-generated method stub
-
+		subControllers.peek().handleKeyEvent(event);
 	}
 }
